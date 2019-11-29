@@ -69,7 +69,8 @@ int main() {
 	cout << a << " * " << b << " = " << a * b << endl;
 	cout << a << " / " << b << " = " << a / b << endl;
 
-	cout << a << " + " << 12 << " = " << a + 12 << endl;	// converted by implicit constructor
-	cout << 12 << " + " << b << " = " << 12 + b << endl;	// converted by non class member function
+	// converting by implicit constructor:
+	cout << a << " + " << 12 << " = " << a + 12 << endl;	
+	cout << 12 << " + " << b << " = " << 12 + b << endl;	
 	return 0;
 }
