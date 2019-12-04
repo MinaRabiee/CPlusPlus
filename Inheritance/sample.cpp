@@ -77,7 +77,7 @@ public:
 	}
 	void ch3CallingPrivateMem()
 	{
-		pPrivateMem();		//private member is accessible because because this sub class is friend of the super class.
+		pPrivateMem();		//private member is accessible because this sub class is friend of the super class.
 		cout << "Private member of Parent is called from third Child." << endl;
 	}
 };
@@ -87,7 +87,7 @@ class Child4 : public Child3	//multilevel inheritance : a sub class inherits fro
 	void ch4CallingPublicMem()
 	{
 		//pPublicMem(); returns error because although this member is public in Parent class but 
-						//the inheritance mode is private in Child3 and it's access modifier has changed to private.
+			      //the inheritance mode is private in Child3 and it's access modifier has changed to private.
 	}
 };
 
@@ -99,20 +99,20 @@ int main()
 
 	c1.pPublicMem();
 	//c1.pProtectedMem();	returns error because of hierarchy. 
-						   //The protected member of parent class can be called only in the child class not out of it.
+			      //The protected member of parent class can be called only in the child class not out of it.
 	//c1.pPrivateMem();		returns error because private member of parent class can not be accessible in child class.
 	c1.ch1CallingPublicMem();
 	c1.ch1CallingProtectedMem();
 
 
 	//c2.pPublicMem();		returns error because mode of inheritance of Child2 is protected so 
-						   //the public members of parent will be protected in child class and can be accessible only inner the class.
+				      //the public members of parent will be protected in child class and can be accessible only inner the class.
 	c2.ch2CallingPublicMem();
 	c2.ch2CallingProtectedMem();
 
 
 	//c3.pPublicMem();		returns error because mode of inheritance of Child3 is private so 
-						   //the public members of parent will be private in child class and can be accessible only inner the class.
+				      //the public members of parent will be private in child class and can be accessible only inner the class.
 	
 	c3.ch3CallingPublicMem();
 	c3.ch3CallingProtectedMem();
