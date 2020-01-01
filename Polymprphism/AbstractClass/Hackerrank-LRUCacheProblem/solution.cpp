@@ -86,7 +86,6 @@ public:
 			return n->second->value;
 		return -1;
 	}
-
 };
 
 int main() {
