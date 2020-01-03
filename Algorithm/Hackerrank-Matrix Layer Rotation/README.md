@@ -19,6 +19,6 @@ Constraints:
 1 <= r <= 10^9
 min(m,n)%2=0
 1 <= aij <= 10^8 where i in [1...m] and j in [1...n]
-Output Format
 
+Output Format:
 Print each row of the rotated matrix as space-separated integers on separate lines.
